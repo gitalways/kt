@@ -14,6 +14,8 @@ public class Product {
 
     @GetMapping("/hello")
     public Map<String, String> helloWorld() {
+
+        //sample project
         return Map.of("message", "Hello, World!");
     }
 
