@@ -25,3 +25,6 @@ jobs:
 
     - name: Run Checkstyle
       run: mvn checkstyle:check
+      with:
+        name: checkstyle-report
+        path: target/site/checkstyle.html
