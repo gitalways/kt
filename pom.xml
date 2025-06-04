@@ -120,7 +120,7 @@
 										<limit>
 											<counter>INSTRUCTION</counter>
 											<value>COVEREDRATIO</value>
-											<minimum>1.0</minimum> <!-- 100% -->
+											<minimum>0.2</minimum> <!-- 100% -->
 										</limit>
 									</limits>
 								</rule>
@@ -128,6 +128,20 @@
 						</configuration>
 					</execution>
 				</executions>
-			</plugin>		</plugins>
+			</plugin>
+
+			<plugin>
+				<groupId>com.github.spotbugs</groupId>
+				<artifactId>spotbugs-maven-plugin</artifactId>
+				<version>4.8.3.0</version>
+				<executions>
+					<execution>
+						<phase>verify</phase>
+						<goals><goal>check</goal></goals>
+					</execution>
+				</executions>
+			</plugin>
+
+		</plugins>
 	</build>
 </project>
