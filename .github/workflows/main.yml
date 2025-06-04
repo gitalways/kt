@@ -24,7 +24,7 @@ jobs:
       run: mvn clean install
 
     - name: Run Checkstyle
-      run: mvn checkstyle:check -X
+      run: mvn verify checkstyle:check -X
 
     - name: Upload Checkstyle report
       uses: actions/upload-artifact@v4
@@ -34,4 +34,3 @@ jobs:
 
     - name: Build Docker image
       run: docker build -t my-app:latest .
-      
